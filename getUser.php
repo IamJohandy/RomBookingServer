@@ -8,9 +8,15 @@
 
 require_once 'base.php';
 
+$result = array();
+
 if($session->get('loggedIn') == false) {
-    //$session->set('lastLocation', 'index.php');
-    header("Location: login.php");
+    //$session->set('lastLocation', 'getUser.php');
+    //header("Location: login.php");
+    //exit;
+    $result['success'] = 0;
+    $result['message'] = "Not logged in";
+    print(json_encode($result, JSON_PRETTY_PRINT));
     exit;
 }
 

@@ -29,7 +29,10 @@ class User
     {
         $temp = array();
         $temp['username'] = $this->bruker_kode;
+        $temp['fisrtname'] = $this->fornavn;
+        $temp['lastname'] = $this->etternavn;
         $temp['email'] = $this->epost;
+        $temp['type'] = $this->bruker_type_id;
 
         return $temp;
     }
