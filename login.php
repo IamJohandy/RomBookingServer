@@ -9,8 +9,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 require_once 'base.php';
 
-$username = $request->request->get('username', 'jdy003');
-$password = $request->request->get('password', 'Benis123');
+$username = $request->request->get('username', false);
+$password = $request->request->get('password', false);
 
 $token = $request->request->get('token', false);
 
